@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1 {
+    margin: 4rem 0;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    color: var(--Dark_Slate_Grey);
+}
+
+.contenedor-img {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-image: url('assets/images/illustration-sign-up-mobile.svg');
+    background-repeat: no-repeat;
+    border-radius: 0 0 2rem 2rem;
+}
+
+@media(min-width: 1440px) {
+
+    body {
+        background-color: var(--Charcoal_Grey);
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .contenedor-principal {
+        padding: 2rem;
+        border-radius: 4rem;
+        background-color: var(--White);
+        margin: 8rem auto;
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contenido {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .contenedor-img {
+        grid-column: 2/3;
+        min-width: 100%;
+        min-height: 100%;
+        background-size: cover;
+        background-image: url('assets/images/illustration-sign-up-desktop.svg');
+        background-repeat: no-repeat;
+        border-radius: 2rem;
+    }
+}
+
+
+@media (max-width: 376px) {
+
+    .contenedor-success {
+        margin: 8rem 0 !important;
+        padding: 0 !important;
+    }
+    
+    body {
+        margin: 0;
+    }
+
+    .contenido, .contenido-success {
+        margin: 0;
+    }
+
+    .contenido-success h1 {
+        width: 30rem;
+        margin: 0;
+    }
+
+    .contenedor-success p span {
+        margin: 0;
+    }
+
+    .contenedor-success p {
+        width: 30rem;
+    }
+    
+    .contenedor-success .boton {
+        width: 27rem !important;
+        margin: 15rem 0 !important;
+    }
+
+    .contenedor-success span {
+        display: inline;
+        padding: 0.2rem;
+    }
+    
+    .con-img {
+        margin: 0;
+        width: 5rem;
+        height: 5rem;
+        background-size: cover;
+        background-image: url('assets/images/icon-success.svg');
+        background-repeat: no-repeat;
+    }
+    
+}
+
+
+.contenido {
+    margin: 2rem;
+}
+
+.contenedor-success {
+    padding: 1rem;
+    border-radius: 4rem;
+    background-color: var(--White);
+    margin: 8rem auto;
+    width: 30%;
+    height: auto;
+}
+
+.contenido-success {
+    margin: 4rem;
+}
+
+.contenido-success h1 {
+    margin: 2rem 0;
+}
+
+.contenedor-success p span {
+    margin: 0;
+}
+
+.contenedor-success span {
+    display: inline;
+    padding: 0.2rem;
+}
+
+.con-img {
+    margin: 3rem 0;
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    background-image: url('assets/images/icon-success.svg');
+    background-repeat: no-repeat;
+}
+
+p,
+span,
+li {
+    list-style: none;
+    margin: 2rem 0;
+    color: var(--Charcoal_Grey);
+}
+
+p {
+    margin-bottom: 3rem;
+}
+
+li {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+li::before {
+    content: url('assets/images/icon-list.svg');
+}
+
+span {
+    margin: 0;
+    margin-top: 4rem;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.input,
+.boton {
+    font-size: 1.6rem;
+    width: 100% !important;
+    padding: 2rem;
+    margin: 1rem 0 !important;
+    border-radius: 1rem;
+}
+
+.input {
+    border: 0.1rem solid var(--Grey);
+}
+
+.input:focus {
+    border: 0.1rem solid var(--Tomato);
+}
+
+.boton {
+    font-weight: bold;
+    border: none;
+    color: var(--White);
+    background-color: var(--Dark_Slate_Grey);
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: linear-gradient(to right, #FF5172, #FE693D);
+    box-shadow: 0 4px 10px rgba(255, 81, 114, 0.5),
+        /* Sombra para el color #FF5172 */
+        0 2px 6px rgba(254, 105, 61, 0.5);
+}
+
+.error {
+    color: var(--Tomato);
+    background-color: hsl(4, 100%, 90%);
+    border: 0.1rem solid var(--Tomato);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span {
+    color: var(--Tomato);
+}
